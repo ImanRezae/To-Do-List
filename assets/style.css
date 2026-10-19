@@ -1,0 +1,245 @@
+body{
+    background-color: rgb(148, 148, 148);
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+#title{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+
+}
+.cantainer{
+    width: 50%;
+    height: 70vh;
+    background-color: rgb(229, 228, 228);
+    box-shadow: 0px 0px 10px 5px rgb(128, 128, 128);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.div1{
+    width: 100%;
+    margin-right: 20px;
+}
+.input1{
+    margin-top: 20px;
+    border: none;
+    width: 70%;
+    height: 25px;
+    margin-left: 10%;
+    border-radius: 20px;
+}
+.input1::placeholder{
+    text-align: center;
+}
+#btn1{
+    border: none;
+    background-color: white;
+    width: 40px;
+    height: 25px;
+    border-radius: 20px;
+}
+.taskBox{
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+.div2{
+    width: 100%;
+    min-height: 40px;
+    background-color: white;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+@media(min-width: 600px) {
+    .div2{
+    margin-left: 3px;
+    
+}
+
+}
+@media(min-width: 1200px) {
+    .input1{
+    width: 80%;
+    margin-left: 3vw;
+       
+    }
+    #btn1{
+        width: 70px;
+    }
+    
+}
+@media(max-width: 400px) {
+    .input1{
+        width: 57%;
+    }
+    #btn{
+        width: 50px;
+    }
+    .div2{width: 95%;
+    }
+}
+@media(min-width: 1400PX) {
+    .div2{margin-left: -3px;}
+}
+
+.pad0{
+    padding-left: 20px;
+
+}
+.btn2{
+    border: none;
+    border-radius: 50%;
+    height: 20px;
+    margin-right: 5px;
+    background-color: black;
+    color: white;
+}
+span{
+    color: black;
+    font-size: medium;
+    padding-left: 10px;
+
+}
+.complite{
+    animation: scale 1s ease forwards;
+}
+@keyframes scale{
+    100%{
+        transform: scale(0.98 , 0.98);
+        opacity: 0.6;
+        text-decoration: line-through;
+    }
+}
+.offComplite{
+    animation: backScale 1s ease forwards;
+}
+@keyframes backScale{
+    100%{
+        transform: scale(1 , 1);
+        opacity: 1;
+        text-decoration: none;
+    }
+}
+.complite2{
+    transform: scale(0.9 , 0.9);
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+.filter-list{
+    width: 100%;
+    background-color: rgb(82, 82, 82);
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3%;
+
+}
+#checkBox{
+    margin: 0px 0px 0px 0px; 
+}
+.filter-sp{
+    color: white;
+    font-size: small;
+    margin-top: 13px;
+}
+@media(max-width: 515px){
+    .filter-sp{
+        font-size: 0.5rem;
+        margin-top: 16px;
+    }
+}
+.dis-none{
+    animation: hidden 1s ease forwards;
+}
+@keyframes hidden{
+    100%{
+        transform: scale(0.1 , 0.1);
+        opacity: 0.2;
+        display: none;
+
+    }
+}
+.countDiv{
+    width: 30%;
+    min-height: 25px;
+    background-color: rgb(82, 82, 82);
+    position: absolute;
+    bottom: 40px;
+    right: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countSpn{
+    color: white;
+    margin: 0px 0px 0px 0px;
+    padding-right: 10px;
+    
+}
+/* .dif-level{
+    width: 40px;
+    height: 25px;
+    background-color: rgb(235, 4, 4);
+    border-radius: 15px;
+}
+.dif-level-text{
+    margin: 5px 0px 0px 0px;
+    text-align: center;
+    font-size: small;
+    color: white;
+
+} */
+.difficulty{
+    width: 20%;
+    height: 20px;
+    font-size: x-small;
+    font-size: 8px;
+    border-radius: 8px;
+    cursor: pointer;                                 /* for mous pointer */
+    outline: none;
+    text-align: center;
+    appearance: none;                           /* flash display none */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+.difficulty option{
+    font-size: 8px;
+    color: white;
+}
+.backcol-green{ background-color: green;}
+.backcol-gray{background-color: rgb(82, 82, 82);}
+.backcol-red{background-color: rgb(225, 0, 0);}
