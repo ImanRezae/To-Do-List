@@ -24,6 +24,7 @@ function createTask(task) {
         }
 
     const taskText = document.createElement("span");
+    taskText.classList.add("task-text");
     taskText.textContent = task.text;
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
@@ -99,10 +100,6 @@ function createTask(task) {
 
 addBtn.addEventListener("click" , ()=> {
     const text = input.value.trim();
-    if (input.value == "") {
-        return;
-    }
-    
     if (text === "") return;
 
 const task = {
